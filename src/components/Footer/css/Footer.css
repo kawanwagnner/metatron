@@ -1,0 +1,44 @@
+/* Estilos para a seção do footer */
+.container-fluid.bg-black {
+  background-color: #000;
+}
+
+#footer-top h2 {
+  font-size: 2rem;
+}
+
+#social-icons i {
+  margin-right: 10px;
+}
+
+#footer-details h4 {
+  margin-bottom: 1rem;
+}
+
+#news-container .color-grey {
+  color: #888;
+}
+
+#news-container .form-control {
+  border-radius: 0;
+}
+
+#contact-container .color-grey {
+  color: #888;
+}
+
+#links-container h4 {
+  margin-bottom: 1rem;
+}
+
+#links-container .color-grey {
+  color: #888;
+}
+
+#footer-bottom .color-grey {
+  color: #888;
+}
+
+#footer-bottom i {
+  color: #e61e10;
+}

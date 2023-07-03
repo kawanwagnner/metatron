@@ -1,0 +1,39 @@
+#container-benefits {
+  width: 80%;
+  height: 100%;
+  margin: auto;
+  padding: 30px 0;
+}
+
+.flex-benefits {
+  display: flex;
+  align-items: start;
+  justify-content: space-around;
+  padding: 10px;
+}
+
+.icone {
+  font-size: 30px;
+  color: blue;
+  margin: 10px;
+}
+
+.benefits {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.benefits strong {
+  color: #0000ff;
+}
+
+.benefits .fa-whatsapp {
+  font-size: 35px;
+}
+
+@media (max-width: 1100px) {
+  .flex-benefits {
+    flex-wrap: wrap;
+  }
+}
