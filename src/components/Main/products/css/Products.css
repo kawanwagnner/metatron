@@ -1,8 +1,20 @@
 /* CARDS */
 
+#produtos {
+  width: 100%;
+}
+
+.container-sub-header {
+  margin: 1em 0 1em 6em;
+}
+
 .products-title {
   position: relative;
-  margin-top: 1em;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  padding-top: 10px;
+  font-weight: 400;
+  color: #000;
 }
 
 .products-title::before {
@@ -22,6 +34,7 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  width: 100%;
   height: 100%;
   margin-bottom: 10px;
 }
@@ -160,4 +173,26 @@
   left: 75px;
   top: -40%;
   transform: translateX(-50%);
+}
+
+.next-products {
+  display: block;
+  text-align: center;
+  margin: 0px auto 10px auto;
+}
+
+.next-products button {
+  border: none;
+  background-color: #0000ff;
+  font-size: 20px;
+  border-radius: 5px;
+  padding: 10px;
+  color: #fff;
+  margin: 2px;
+}
+
+.next-products button:hover {
+  opacity: 0.5;
+  transition: all 0.3s ease;
+  cursor: pointer;
 }

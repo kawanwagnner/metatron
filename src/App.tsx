@@ -3,6 +3,7 @@ import Slider from "./components/Main/slider/Slider";
 import Navbar from "./components/header/NavBar";
 import Categories from "./components/Main/categories/Categories";
 import Products from "./components/Main/products/Products";
+import AboutWe from "./components/Main/aboutWe/AboutWe";
 
 import "./App.css";
 
@@ -14,6 +15,7 @@ function App() {
       <Benefits />
       <Categories />
       <Products />
+      <AboutWe />
     </>
   );
 }
