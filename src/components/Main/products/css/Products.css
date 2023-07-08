@@ -1,18 +1,17 @@
-/* CARDS */
-
-#produtos {
+.produtos {
   width: 100%;
 }
 
-.container-sub-header {
-  margin: 1em 0 1em 6em;
+.produtos .wrapper {
+  width: 90%;
+  margin: auto;
+  position: relative;
 }
 
 .products-title {
-  position: relative;
   font-size: 2rem;
   margin-bottom: 20px;
-  padding-top: 10px;
+  padding-top: 20px;
   font-weight: 400;
   color: #000;
 }
@@ -25,7 +24,7 @@
 
   position: absolute;
   left: 100px;
-  top: -50%;
+  top: 0%;
   transform: translateX(-50%);
 }
 

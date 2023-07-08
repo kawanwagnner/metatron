@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "./img/metatronColorBlack.svg";
+import logo from "./img/metatronColorBlue.svg";
 
 import { AiOutlineMenu } from "react-icons/ai";
 import { FaShoppingCart } from "react-icons/fa";

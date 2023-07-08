@@ -1,16 +1,14 @@
-/* CATEGORIES */
-
 .categories {
   width: 100%;
 }
 
 .categories .wrapper {
-  width: 80%;
+  width: 90%;
   margin: auto;
   position: relative;
   display: flex;
   justify-content: center;
-  gap: 25px;
+  gap: 20px;
   flex-direction: column;
   padding: 10px 0 40px 0;
 }
@@ -81,22 +79,20 @@
 }
 
 .btn-show-all {
-  width: 50%;
+  width: 30%;
   display: block;
   padding: 10px 20px;
   border-radius: 10px;
-  background-color: #fff;
-  color: #000;
+  background-color: #0000ff;
+  color: #fff;
   outline: none;
-  border: 1px solid #000000;
+  border: none;
   transition: all 0.5s ease;
   margin: 30px auto 0 auto;
 }
 
 .btn-show-all:hover {
-  background-color: #0000ff;
-  border: 1px solid #0000ff;
-  color: #fff;
+  opacity: 0.7;
 }
 
 .category-title {

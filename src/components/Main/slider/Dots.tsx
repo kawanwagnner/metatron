@@ -2,9 +2,7 @@ import React from "react";
 
 interface Slide {
   title: string;
-  description: string;
   urls: string;
-  link: string;
 }
 
 interface DotsProps {

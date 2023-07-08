@@ -4,6 +4,7 @@ import Navbar from "./components/header/NavBar";
 import Categories from "./components/Main/categories/Categories";
 import Products from "./components/Main/products/Products";
 import AboutWe from "./components/Main/aboutWe/AboutWe";
+import Footer from "./components/Footer/Footer";
 
 import "./App.css";
 
@@ -16,6 +17,7 @@ function App() {
       <Categories />
       <Products />
       <AboutWe />
+      <Footer />
     </>
   );
 }
