@@ -1,15 +1,16 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,500;0,900;1,100;1,500;1,900&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,500;0,900;1,100;1,500;1,900&display=swap");
 
 * {
   font-family: "Roboto", sans-serif;
 }
 
 .slider-container {
-  width: 92%;
+  max-width: 92vw;
   height: 350px;
   position: relative;
-  margin: 15px auto auto auto;
+  margin: 15px 100px 20px 100px;
   overflow: hidden;
+  transform: translateX(-5%);
 }
 
 .active {
@@ -149,4 +150,4 @@
 
 .play-pause {
   color: black;
-}
+} */

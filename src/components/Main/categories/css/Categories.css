@@ -3,7 +3,7 @@
 }
 
 .categories .wrapper {
-  width: 90%;
+  max-width: 75em;
   margin: auto;
   position: relative;
   display: flex;

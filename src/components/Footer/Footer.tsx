@@ -14,7 +14,7 @@ const Footer: React.FC = () => {
       <div className="container">
         <div className="row">
           <div className="footer-col">
-            <h4>empresa</h4>
+            <h4>empresa:</h4>
             <ul>
               <li>
                 <a href="#">sobre nós</a>
@@ -31,7 +31,7 @@ const Footer: React.FC = () => {
             </ul>
           </div>
           <div className="footer-col">
-            <h4>ajuda</h4>
+            <h4>ajuda:</h4>
             <ul>
               <li>
                 <a href="#">FAQ</a>
@@ -51,7 +51,7 @@ const Footer: React.FC = () => {
             </ul>
           </div>
           <div className="footer-col">
-            <h4>loja online</h4>
+            <h4>loja online:</h4>
             <ul>
               <li>
                 <a href="#">relógios</a>
@@ -68,19 +68,19 @@ const Footer: React.FC = () => {
             </ul>
           </div>
           <div className="footer-col">
-            <h4>nos siga</h4>
+            <h4>nos siga:</h4>
             <div className="social-links">
-              <a href="#">
-                <BiLogoFacebook />
+              <a href="#" style={{ padding: "7px" }}>
+                <BiLogoFacebook size={25} />
               </a>
-              <a href="#">
-                <AiOutlineTwitter />
+              <a href="#" style={{ padding: "7px" }}>
+                <AiOutlineTwitter size={25} />
               </a>
-              <a href="#">
-                <AiFillInstagram />
+              <a href="#" style={{ padding: "7px" }}>
+                <AiFillInstagram size={25} />
               </a>
-              <a href="#">
-                <AiFillLinkedin />
+              <a href="#" style={{ padding: "7px" }}>
+                <AiFillLinkedin size={25} />
               </a>
             </div>
           </div>

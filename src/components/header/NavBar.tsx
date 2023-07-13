@@ -1,13 +1,25 @@
-import React from "react";
+import React, { useState } from "react";
 import logo from "./img/metatronColorBlack.svg";
 
 import { AiOutlineMenu } from "react-icons/ai";
 import { FaShoppingCart } from "react-icons/fa";
+import { GrClose } from "react-icons/gr";
 import { FaLocationDot, FaMagnifyingGlass } from "react-icons/fa6";
 
 import "../header/css/Navbar.css";
 
 const Navbar: React.FC = () => {
+  const [navbarAtivo, setNavbarAtivo] = useState(false);
+
+  const handleClick = () => {
+    setNavbarAtivo(!navbarAtivo);
+    document.body.style.overflowX = "hidden";
+  };
+
+  const handleLinkClick = () => {
+    setNavbarAtivo(false);
+  };
+
   return (
     <>
       <div id="promotion">
@@ -15,81 +27,92 @@ const Navbar: React.FC = () => {
       </div>
 
       <header id="cabeçalho">
-        <button id="btn-menu">
-          <AiOutlineMenu />
+        <button id="btn-menu" onClick={handleClick}>
+          {navbarAtivo ? <GrClose /> : <AiOutlineMenu />}
         </button>
 
-        <a href="index.html">
-          <img id="logo" src={logo} alt={"logo"} />
-        </a>
+        <img id="logo" src={logo} alt={"logo"} />
 
-        <div id="info-navigation">
-          <div id="header-info">
-            <div className="container-for-search">
-              <div className="flex-input">
-                <input type="text" placeholder="O que você está buscando?" />
-                <button>
-                  <FaMagnifyingGlass />
-                </button>
-              </div>
-              <div className="products-for-client">
-                <div id="btn-location">
-                  <button>
-                    <FaLocationDot size={30} />
-                  </button>
-                  <span>Rastreio</span>
-                </div>
-                <div id="btn-cart-shopping">
-                  <button>
-                    <FaShoppingCart size={32} />
-                  </button>
-                  <span>Carrinho</span>
-                </div>
-              </div>
-            </div>
-            <div id="header-navigation">
-              <button id="btn-menu-desk">
-                <AiOutlineMenu />
-              </button>
-              <nav id="navbar">
-                <ul id="list-navbar">
-                  <li>
-                    <a
-                      className="nav-link white-color active"
-                      aria-current="page"
-                      href="#promotion"
-                    >
-                      Home
-                    </a>
-                  </li>
-                  <li>
-                    <a className="nav-link white-color" href="#produtos">
-                      Correntes
-                    </a>
-                  </li>
-                  <li>
-                    <a className="nav-link white-color" href="#produtos">
-                      Pulseiras
-                    </a>
-                  </li>
-                  <li>
-                    <a className="nav-link white-color" href="#contato">
-                      Contato
-                    </a>
-                  </li>
-                  <li>
-                    <a className="nav-link white-color" href="vakinha.html">
-                      Investimentos
-                    </a>
-                  </li>
-                </ul>
-              </nav>
-            </div>
+        <div id="header-info">
+          <div className="search-input">
+            <input type="text" placeholder="O que você está buscando?" />
+            <button>
+              <FaMagnifyingGlass />
+            </button>
+          </div>
+
+          <nav id="navbar" className={navbarAtivo ? "active" : ""}>
+            <button id="btn-menu-desk">
+              <AiOutlineMenu />
+            </button>
+            <ul id="list-navbar">
+              <li>
+                <a
+                  className="nav-link white-color active"
+                  aria-current="page"
+                  href="#promotion"
+                  onClick={handleLinkClick}
+                >
+                  Home
+                </a>
+              </li>
+              <li>
+                <a
+                  className="nav-link white-color"
+                  href="#produtos"
+                  onClick={handleLinkClick}
+                >
+                  Correntes
+                </a>
+              </li>
+              <li>
+                <a
+                  className="nav-link white-color"
+                  href="#produtos"
+                  onClick={handleLinkClick}
+                >
+                  Pulseiras
+                </a>
+              </li>
+              <li>
+                <a
+                  className="nav-link white-color"
+                  href="#contato"
+                  onClick={handleLinkClick}
+                >
+                  Contato
+                </a>
+              </li>
+              <li>
+                <a
+                  className="nav-link white-color"
+                  href="#"
+                  onClick={handleLinkClick}
+                >
+                  Investimentos
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+
+        <div className="products-for-client">
+          <div id="btn-location">
+            <button>
+              <FaLocationDot size={30} />
+            </button>
+            <p>Rastreio</p>
+          </div>
+          <div id="btn-cart-shopping">
+            <button>
+              <FaShoppingCart size={32} />
+            </button>
+            <p>Carrinho</p>
           </div>
         </div>
       </header>
 
-      <div className="media-flex-input">
+      <div className="media-search-input">
         <input type="text" placeholder="O que você está buscando?" />
         <button>
           <FaMagnifyingGlass />

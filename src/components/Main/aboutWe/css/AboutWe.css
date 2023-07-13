@@ -1,55 +1,136 @@
-.vakinha {
-  width: 100%;
+#sobre-mim {
+  color: #fff;
+  overflow-x: hidden;
+  padding-bottom: 100px;
   height: 100vh;
-  display: block;
-  padding: 5%;
-  text-align: center;
 }
 
-.post-vakinha {
-  width: 40%;
-  height: 40%;
-  margin: 0 auto 0 45%;
-  transform: translateX(-45%);
-  display: block;
+.section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 5%;
+  overflow-x: hidden;
+  background-color: #999;
+  border-radius: 20px;
+  padding: 50px;
 }
 
-.container-text {
-  width: 80%;
-  margin: 20px auto;
-  text-align: center;
-  font-weight: 500;
+#container-image {
+  width: 250px;
 }
 
-.tilte-about-us {
-  margin: 10px auto;
+#photo {
+  width: 200px;
+  height: 220px;
 }
 
-.paragraphy-about {
-  font-size: 18px;
+.about-typing {
+  color: #000;
+  font-size: 40px;
+  width: 0;
+  padding-left: -25px;
+  border-right: 1px solid #fff;
+  font-weight: bolder;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: blinkCursor2 500ms infinite normal,
+    typing2 2s 1s alternate-reverse infinite;
 }
 
-/* RESPONSIVE MOBILE */
+@keyframes typing2 {
+  from {
+    width: 10px;
+  }
 
+  to {
+    width: 190px;
+  }
+}
+
+@keyframes blinkCursor2 {
+  from {
+    border-right: 1px solid #000000;
+  }
+
+  to {
+    border-right: transparent;
+  }
+}
+
+.paragraphy {
+  width: 800px;
+  text-indent: 20px;
+  color: #000;
+  font-weight: bold;
+  text-align: justify;
+  margin-left: 20px;
+}
+
+/* Responsive Sobre Mim; */
 @media screen and (max-width: 768px) {
-  .vakinha {
-    display: block;
+  #sobre-mim {
     height: 100%;
   }
 
-  .post-vakinha {
+  .section {
     display: block;
-    margin: 30px auto;
-    width: 100%;
-    height: 100%;
   }
 
-  .vakinha div {
-    text-align: center;
-    font-weight: 500;
+  .photo {
+    width: 300px;
+    height: 300px;
+    display: block;
+    margin: auto;
   }
 
-  .vakinha > div > h2 {
-    margin-bottom: 50px;
+  @keyframes typing2 {
+    from {
+      width: 10px;
+    }
+
+    to {
+      width: 270px;
+    }
+  }
+
+  .paragraphy {
+    display: block;
+    margin: auto;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .section {
+    flex-direction: column;
+  }
+
+  .photo {
+    width: 50%;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .about-typing {
+    font-size: 20px;
+  }
+
+  @keyframes typing2 {
+    from {
+      width: 0px;
+    }
+
+    to {
+      width: 250px;
+    }
+  }
+
+  .display-sobremim {
+    font-size: 25px;
+  }
+
+  .display-sobremim::after {
+    font-size: 20px;
   }
 }

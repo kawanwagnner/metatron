@@ -80,20 +80,6 @@ const Products: React.FC = () => {
               </a>
             </div>
           </div>
-          <div className="card">
-            <div className="imgBx">
-              <img src={headphoneImage} alt="" />
-            </div>
-            <div className="contentBx">
-              <h3>Wireless Headphone</h3>
-              <h2 className="price">
-                R$ 49.<small>99</small>
-              </h2>
-              <a href="details.html" className="buy">
-                Compre Agora
-              </a>
-            </div>
-          </div>
         </div>
         <div className="next-products">
           <p>________</p>

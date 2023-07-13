@@ -1,28 +1,54 @@
 import React from "react";
-import LogoAboutUs from "./img/metatronColorBlack.svg";
+import { Container, Image } from "react-bootstrap";
+import logo from "./img/LogoMetatron.svg";
 
 import "./css/AboutWe.css";
 
-const Home: React.FC = () => {
+const SobreMim: React.FC = () => {
   return (
-    <main id="home">
-      <hr style={{ width: "50%", margin: "50px auto -20px auto" }} />
-      <div className="vakinha">
-        <img className="post-vakinha" src={LogoAboutUs} alt="Banner 3 SLIDER" />
-        <div className="container-text">
-          <h2 className="tilte-about-us">QUEM SOMOS?</h2>
-          <p className="paragraphy-about">
-            Com apenas 3 meses de história a MetatrON ainda vai ter grande
-            impacto no mercado brasileiro, não somente isso como também
-            pretendemos criar mais oportunidades para pequenos empreendedores
-            disciplinados e que almejam o sucesso a todo o custo! Mais e você
-            aí, Vai ficar de fora desse projeto? Nos ajude a alcançar essa meta
-            de uma vez por todas, doe para a causa. 🍀
+    <section className="container-fluid" id="sobre-mim">
+      <Container className="section">
+        <div id="container-image">
+          <Image src={logo} alt="Photo" roundedCircle id="photo" />
+          <h4 className="about-typing d-inline-flex ms-3 mt-4 fst-italic">
+            MetatrON.
+          </h4>
+        </div>
+        <div className="flex-column">
+          <p className="paragraphy fs-5 fst-italic">
+            Na Metatron, unimos a elegância das roupas com a inovação da
+            tecnologia. Somos apaixonados por criar experiências únicas,
+            oferecendo produtos de alta qualidade que combinam estilo e
+            funcionalidade. Combinando a arte do design com as últimas
+            tendências tecnológicas, proporcionamos soluções vestíveis que
+            elevam o seu estilo e simplificam o seu dia a dia.
+          </p>
+          <p className="paragraphy fs-5 fst-italic">
+            Nossa equipe dedicada e especializada está comprometida em superar
+            suas expectativas. Desde a seleção cuidadosa dos materiais até o
+            desenvolvimento de recursos inteligentes, cada detalhe é pensado
+            para oferecer um produto excepcional. Acreditamos que a moda e a
+            tecnologia devem andar de mãos dadas, trazendo inovação e
+            praticidade para o seu guarda-roupa.
+          </p>
+          <p className="paragraphy fs-5 fst-italic">
+            Valorizamos a confiança e a satisfação dos nossos clientes.
+            Trabalhamos incessantemente para garantir a excelência em cada
+            aspecto do nosso negócio, desde o atendimento ao cliente até a
+            entrega dos produtos. Estamos comprometidos em fornecer um serviço
+            de qualidade, uma experiência de compra segura e produtos que você
+            irá adorar.
+          </p>
+          <p className="paragraphy fs-5 fst-italic">
+            Seja você um entusiasta da moda ou um aficionado por tecnologia, na
+            Metatron você encontrará o equilíbrio perfeito entre estilo e
+            inovação. Junte-se a nós em nossa jornada e descubra um mundo onde
+            as roupas ganham vida com a magia da tecnologia.
           </p>
         </div>
-      </div>
-    </main>
+      </Container>
+    </section>
   );
 };
 
-export default Home;
+export default SobreMim;
