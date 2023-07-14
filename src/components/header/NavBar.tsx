@@ -53,7 +53,7 @@ const Navbar: React.FC = () => {
                   href="#promotion"
                   onClick={handleLinkClick}
                 >
-                  Home
+                  Página Inicial
                 </a>
               </li>
               <li>
@@ -62,7 +62,7 @@ const Navbar: React.FC = () => {
                   href="#produtos"
                   onClick={handleLinkClick}
                 >
-                  Correntes
+                  Acessórios
                 </a>
               </li>
               <li>
@@ -71,7 +71,7 @@ const Navbar: React.FC = () => {
                   href="#produtos"
                   onClick={handleLinkClick}
                 >
-                  Pulseiras
+                  Roupas
                 </a>
               </li>
               <li>
@@ -80,7 +80,7 @@ const Navbar: React.FC = () => {
                   href="#contato"
                   onClick={handleLinkClick}
                 >
-                  Contato
+                  Gamer
                 </a>
               </li>
               <li>
@@ -89,7 +89,7 @@ const Navbar: React.FC = () => {
                   href="#"
                   onClick={handleLinkClick}
                 >
-                  Investimentos
+                  Casa
                 </a>
               </li>
             </ul>
@@ -99,13 +99,14 @@ const Navbar: React.FC = () => {
         <div className="products-for-client">
           <div id="btn-location">
             <button>
-              <FaLocationDot size={30} />
+              <FaLocationDot size={25} />
             </button>
             <p>Rastreio</p>
+            <h6 className="rhetorical-question">Onde está meu pedido?</h6>
           </div>
           <div id="btn-cart-shopping">
             <button>
-              <FaShoppingCart size={32} />
+              <FaShoppingCart size={28} />
             </button>
             <p>Carrinho</p>
           </div>

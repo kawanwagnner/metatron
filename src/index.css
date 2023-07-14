@@ -9,5 +9,6 @@
 }
 
 body {
+  user-select: none;
   background-color: #e7e2de;
 }

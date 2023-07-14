@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { MdKeyboardArrowRight, MdKeyboardArrowLeft } from "react-icons/md";
+
+import "./css/slider.css";
 
 import img1 from "./img/banner-1.png";
 import img2 from "./img/banner-2.png";
@@ -24,33 +27,45 @@ const Carousel: React.FC = () => {
 
   return (
     <div>
-      <button onClick={handlePrev}>Previous</button>
+      <div className="container-slider">
+        <button className="prev" onClick={handlePrev}>
+          <MdKeyboardArrowLeft />
+        </button>
+        <AnimatePresence initial={false} exitBeforeEnter>
+          <motion.img
+            key={currentIndex}
+            src={images[currentIndex]}
+            alt="Carousel Image"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.5 }}
+          />{" "}
+          {/* <div className="text-slider">
+            <motion.h1 key={currentIndex} transition={{ duration: 0.5 }}>
+              {currentIndex === 0 && <span>Correntes e Acessórios</span>}
+              {currentIndex === 1 && <span>Tecnologia e inovação</span>}
+              {currentIndex === 2 && <span>Os MELHORES PREÇOS!</span>}
+            </motion.h1>
+          </div> */}
+        </AnimatePresence>
+        <button className="next" onClick={handleNext}>
+          <MdKeyboardArrowRight />
+        </button>
+      </div>
 
-      <AnimatePresence initial={false} exitBeforeEnter>
-        <motion.img
-          key={currentIndex}
-          src={images[currentIndex]}
-          alt="Carousel Image"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          transition={{ duration: 0.5 }}
-        />
-      </AnimatePresence>
-
-      <button onClick={handleNext}>Next</button>
-
-      <div style={{ marginTop: "1rem" }}>
+      <div className="all-dots" style={{ marginTop: "1rem" }}>
         {images.map((_, index) => (
           <motion.span
             key={index}
             style={{
               display: "inline-block",
-              width: "0.5rem",
-              height: "0.5rem",
+              width: "1rem",
+              height: "1rem",
               borderRadius: "50%",
-              // margin: "0 0.25rem",
-              background: index === currentIndex ? "red" : "gray",
+              margin: "0 0.25rem",
+              cursor: "pointer",
+              background: index === currentIndex ? "#0000ff" : "#444",
             }}
             onClick={() => setCurrentIndex(index)}
             whileHover={{ scale: 1.2 }}
