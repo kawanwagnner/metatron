@@ -1,7 +1,8 @@
-import React from "react";
-import { BsBagHeart } from "react-icons/bs";
+import React, { useState } from "react";
+import { BsBagHeart, BsBagCheckFill } from "react-icons/bs";
 
 import "./css/Products.css";
+import { useNavigate } from "react-router-dom";
 
 interface Product {
   id: number;
@@ -16,13 +17,30 @@ interface ProductCardProps {
 }
 
 const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
+  const navigate = useNavigate();
+
+  const [Icon, setIcon] = useState(<BsBagHeart size={25} />);
+  const saveInCart = () => {
+    setIcon(<BsBagCheckFill size={25} />);
+  };
+
+  const removeInCart = () => {
+    setIcon(<BsBagHeart size={25} />);
+  };
+
   return (
     <div className="card">
       <div className="btn-add-cart">
-        <BsBagHeart size={25} />
+        <button onClick={saveInCart} onClickCapture={removeInCart}>
+          {Icon}
+        </button>
       </div>
       <div className="imgBx">
-        <img src={product.image} alt="Algo deu errado. :-(" />
+        <img
+          onClick={() => navigate(`/details/${product.id}`)}
+          src={product.image}
+          alt="Algo deu errado. :-("
+        />
       </div>
       <div className="contentBx">
         <h3>{product.name}</h3>

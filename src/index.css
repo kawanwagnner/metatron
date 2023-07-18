@@ -13,3 +13,8 @@ body {
   overflow-x: hidden;
   background-color: #e7e2de;
 }
+
+button {
+  background: none;
+  border: none;
+}
