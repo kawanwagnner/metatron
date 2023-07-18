@@ -50,8 +50,8 @@ const Navbar: React.FC = () => {
                 <a
                   className="nav-link white-color active"
                   aria-current="page"
-                  href="#promotion"
                   onClick={handleLinkClick}
+                  href={"/"}
                 >
                   Página Inicial
                 </a>
@@ -77,7 +77,7 @@ const Navbar: React.FC = () => {
               <li>
                 <a
                   className="nav-link white-color"
-                  href="#contato"
+                  href="#produtos"
                   onClick={handleLinkClick}
                 >
                   Gamer

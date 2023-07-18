@@ -1,92 +1,34 @@
-import React from "react";
-import headphoneImage from "./img/fone.png";
+import React, { useEffect, useState } from "react";
+import ProductCard from "./ProdutsCard";
+import productsData from "../../../APIS/products.json";
 
 import "./css/Products.css";
 
+interface Product {
+  id: number;
+  name: string;
+  price: number;
+  image: string;
+}
+
 const Products: React.FC = () => {
+  const [products, setProducts] = useState<Product[]>([]);
+
+  useEffect(() => {
+    // Simulando uma chamada à API:
+    // Aqui eu tbm posso substituir por uma chamada real à API externa futuramente.
+    setProducts(productsData.products);
+  }, []);
+
   return (
-    <div className="produtos">
+    <div id="produtos" className="produtos">
       <div className="wrapper">
         <h3 className="products-title">Principais produtos:</h3>
 
         <div id="container-cards">
-          <div className="card">
-            <div className="imgBx">
-              <img src={headphoneImage} alt="" />
-            </div>
-            <div className="contentBx">
-              <h3>Wireless Headphone</h3>
-              <h2 className="price">
-                R$ 49.<small>99</small>
-              </h2>
-              <a href="details.html" className="buy">
-                Compre Agora
-              </a>
-            </div>
-          </div>
-          <div className="card">
-            <div className="imgBx">
-              <img src={headphoneImage} alt="" />
-            </div>
-            <div className="contentBx">
-              <h3>Wireless Headphone</h3>
-              <h2 className="price">
-                R$ 49.<small>99</small>
-              </h2>
-              <a href="details.html" className="buy">
-                Compre Agora
-              </a>
-            </div>
-          </div>
-          <div className="card">
-            <div className="imgBx">
-              <img src={headphoneImage} alt="" />
-            </div>
-            <div className="contentBx">
-              <h3>Wireless Headphone</h3>
-              <h2 className="price">
-                R$ 49.<small>99</small>
-              </h2>
-              <a href="details.html" className="buy">
-                Compre Agora
-              </a>
-            </div>
-          </div>
-          <div className="card">
-            <div className="imgBx">
-              <img src={headphoneImage} alt="" />
-            </div>
-            <div className="contentBx">
-              <h3>Wireless Headphone</h3>
-              <h2 className="price">
-                R$ 49.<small>99</small>
-              </h2>
-              <a href="details.html" className="buy">
-                Compre Agora
-              </a>
-            </div>
-          </div>
-          <div className="card">
-            <div className="imgBx">
-              <img src={headphoneImage} alt="" />
-            </div>
-            <div className="contentBx">
-              <h3>Wireless Headphone</h3>
-              <h2 className="price">
-                R$ 49.<small>99</small>
-              </h2>
-              <a href="details.html" className="buy">
-                Compre Agora
-              </a>
-            </div>
-          </div>
-        </div>
-        <div className="next-products">
-          <p>________</p>
-          <button>1</button>
-          <button>2</button>
-          <button>3</button>
-          <p>________</p>
+          {products.map((product) => (
+            <ProductCard key={product.id} product={product} />
+          ))}
         </div>
       </div>
     </div>

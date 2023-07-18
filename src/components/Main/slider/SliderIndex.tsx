@@ -4,12 +4,12 @@ import { MdKeyboardArrowRight, MdKeyboardArrowLeft } from "react-icons/md";
 
 import "./css/slider.css";
 
-import img1 from "./img/banner-1.png";
-import img2 from "./img/banner-2.png";
-import img3 from "./img/banner-3.png";
+import img1 from "./img/especial.png";
+import img2 from "./img/cupom.png";
+// import img3 from "./img/Talk to us.png";
 
 const Carousel: React.FC = () => {
-  const images = [img1, img2, img3];
+  const images = [img1, img2];
 
   const [currentIndex, setCurrentIndex] = useState(0);
 
