@@ -36,7 +36,7 @@
       "id": 5,
       "name": "WIRELESS OVER WATCH BLACK",
       "price": 59.99,
-      "image": "https://github.com/kawanwagnner/metatron/blob/main/src/components/Main/products/img/details/w1.png?raw=true", 
+      "image": "https://github.com/kawanwagnner/metatron/blob/main/src/components/Main/products/img/details/w1.png?raw=true",
       "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa facilis nihil corporis sed aperiam perspiciatis nobis beatae placeat repudiandae, provident earum perferendis itaque tempora corrupti ex cumque ipsa omnis ipsam quo quasi nemo. Odio explicabo voluptatibus odit, officia at ipsam!",
       "category": "vestivel"
     },
@@ -44,7 +44,7 @@
       "id": 6,
       "name": "WIRELESS OVER WATCH GREEN",
       "price": 39.99,
-      "image": "https://github.com/kawanwagnner/metatron/blob/main/src/components/Main/products/img/details/w2.png?raw=true", 
+      "image": "https://github.com/kawanwagnner/metatron/blob/main/src/components/Main/products/img/details/w2.png?raw=true",
       "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa facilis nihil corporis sed aperiam perspiciatis nobis beatae placeat repudiandae, provident earum perferendis itaque tempora corrupti ex cumque ipsa omnis ipsam quo quasi nemo. Odio explicabo voluptatibus odit, officia at ipsam!",
       "category": "vestivel"
     },

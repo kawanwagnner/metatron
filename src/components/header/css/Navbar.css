@@ -133,7 +133,7 @@ html {
   color: #000;
   font-size: 30px;
   pointer-events: none;
-  transform: translateY(-7%);
+  transform: translateY(3%);
 }
 
 #btn-menu {

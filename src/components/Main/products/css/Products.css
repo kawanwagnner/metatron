@@ -91,9 +91,21 @@
   position: absolute;
   top: 15px;
   right: 15px;
-  color: #fff;
+  background-color: #fff;
+  border-radius: 50%;
+  padding: 5px 8px;
+  color: #000;
   cursor: pointer;
   z-index: 2;
+  visibility: hidden;
+}
+
+.card:hover .btn-add-cart {
+  visibility: visible;
+}
+
+.btn-add-cart button {
+  cursor: pointer;
 }
 
 .card .imgBx {
@@ -104,6 +116,7 @@
   justify-content: center;
   align-items: center;
   padding-top: 20px;
+  cursor: pointer;
   z-index: 1;
 }
 
