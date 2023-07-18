@@ -5,21 +5,64 @@
       "name": "WIRELESS HEADPHONE",
       "price": 49.99,
       "image": "https://github.com/kawanwagnner/metatron/blob/main/src/components/Main/products/img/fone.png?raw=true",
-      "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa facilis nihil corporis sed aperiam perspiciatis nobis beatae placeat repudiandae, provident earum perferendis itaque tempora corrupti ex cumque ipsa omnis ipsam quo quasi nemo. Odio explicabo voluptatibus odit, officia at ipsam!"
+      "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa facilis nihil corporis sed aperiam perspiciatis nobis beatae placeat repudiandae, provident earum perferendis itaque tempora corrupti ex cumque ipsa omnis ipsam quo quasi nemo. Odio explicabo voluptatibus odit, officia at ipsam!",
+      "category": "tecnologia"
     },
     {
       "id": 2,
-      "name": "WIRELESS HEADPHONE S/ FIO",
-      "price": 59.99,
-      "image": "https://github.com/kawanwagnner/metatron/blob/main/src/components/Main/products/img/fone.png?raw=true", 
-      "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa facilis nihil corporis sed aperiam perspiciatis nobis beatae placeat repudiandae, provident earum perferendis itaque tempora corrupti ex cumque ipsa omnis ipsam quo quasi nemo. Odio explicabo voluptatibus odit, officia at ipsam!"
+      "name": "WIRELESS DESPERTADOR",
+      "price": 49.99,
+      "image": "https://www.madebasics.com/cdn/shop/products/RD_foto2.png?v=1570112803",
+      "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa facilis nihil corporis sed aperiam perspiciatis nobis beatae placeat repudiandae, provident earum perferendis itaque tempora corrupti ex cumque ipsa omnis ipsam quo quasi nemo. Odio explicabo voluptatibus odit, officia at ipsam!",
+      "category": "tecnologia"
     },
     {
       "id": 3,
-      "name": "WIRELESS HEADPHONE XIOMI",
+      "name": "Teclado Gamer Play On Led",
+      "price": 80.09,
+      "image": "https://leonora.vteximg.com.br/arquivos/ids/163950/teclado-gamer-play-on-led-semi-mecanico-letron-74359--1.png?v=638065387281770000",
+      "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa facilis nihil corporis sed aperiam perspiciatis nobis beatae placeat repudiandae, provident earum perferendis itaque tempora corrupti ex cumque ipsa omnis ipsam quo quasi nemo. Odio explicabo voluptatibus odit, officia at ipsam!",
+      "category": "tecnologia"
+    },
+    {
+      "id": 4,
+      "name": "WIRELESS MOUESE GAMER",
+      "price": 29.99,
+      "image": "https://leonora.vteximg.com.br/arquivos/ids/163588/mouse-gamer-rgb-7-botoes-7200-dpis-letron-74315--1.png?v=638037739255200000",
+      "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa facilis nihil corporis sed aperiam perspiciatis nobis beatae placeat repudiandae, provident earum perferendis itaque tempora corrupti ex cumque ipsa omnis ipsam quo quasi nemo. Odio explicabo voluptatibus odit, officia at ipsam!",
+      "category": "tecnologia"
+    },
+    {
+      "id": 5,
+      "name": "WIRELESS OVER WATCH BLACK",
+      "price": 59.99,
+      "image": "https://github.com/kawanwagnner/metatron/blob/main/src/components/Main/products/img/details/w1.png?raw=true", 
+      "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa facilis nihil corporis sed aperiam perspiciatis nobis beatae placeat repudiandae, provident earum perferendis itaque tempora corrupti ex cumque ipsa omnis ipsam quo quasi nemo. Odio explicabo voluptatibus odit, officia at ipsam!",
+      "category": "vestivel"
+    },
+    {
+      "id": 6,
+      "name": "WIRELESS OVER WATCH GREEN",
       "price": 39.99,
-      "image": "https://github.com/kawanwagnner/metatron/blob/main/src/components/Main/products/img/fone.png?raw=true", 
-      "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa facilis nihil corporis sed aperiam perspiciatis nobis beatae placeat repudiandae, provident earum perferendis itaque tempora corrupti ex cumque ipsa omnis ipsam quo quasi nemo. Odio explicabo voluptatibus odit, officia at ipsam!"
+      "image": "https://github.com/kawanwagnner/metatron/blob/main/src/components/Main/products/img/details/w2.png?raw=true", 
+      "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa facilis nihil corporis sed aperiam perspiciatis nobis beatae placeat repudiandae, provident earum perferendis itaque tempora corrupti ex cumque ipsa omnis ipsam quo quasi nemo. Odio explicabo voluptatibus odit, officia at ipsam!",
+      "category": "vestivel"
+    },
+    {
+      "id": 7,
+      "name": "WIRELESS OVER WATCH BLUE",
+      "price": 49.99,
+      "image": "https://github.com/kawanwagnner/metatron/blob/main/src/components/Main/products/img/details/w4.png?raw=true",
+      "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa facilis nihil corporis sed aperiam perspiciatis nobis beatae placeat repudiandae, provident earum perferendis itaque tempora corrupti ex cumque ipsa omnis ipsam quo quasi nemo. Odio explicabo voluptatibus odit, officia at ipsam!",
+      "category": "vestivel"
+    },
+    {
+      "id": 8,
+      "name": "WIRELESS OVER WATCH WHITE",
+      "price": 49.99,
+      "image": "https://github.com/kawanwagnner/metatron/blob/main/src/components/Main/products/img/details/w5.png?raw=true",
+      "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa facilis nihil corporis sed aperiam perspiciatis nobis beatae placeat repudiandae, provident earum perferendis itaque tempora corrupti ex cumque ipsa omnis ipsam quo quasi nemo. Odio explicabo voluptatibus odit, officia at ipsam!",
+      "category": "vestivel"
     }
   ]
 }

@@ -9,6 +9,7 @@ interface Product {
   name: string;
   price: number;
   image: string;
+  category: string;
 }
 
 const Products: React.FC = () => {
@@ -26,9 +27,27 @@ const Products: React.FC = () => {
         <h3 className="products-title">Principais produtos:</h3>
 
         <div id="container-cards">
-          {products.map((product) => (
-            <ProductCard key={product.id} product={product} />
-          ))}
+          <section className="sections">
+            <h4 className="section-title">Tecnologia:</h4>
+            <div className="product-cards">
+              {products
+                .filter((product) => product.category === "tecnologia")
+                .map((product) => (
+                  <ProductCard key={product.id} product={product} />
+                ))}
+            </div>
+          </section>
+
+          <section className="sections">
+            <h4 className="section-title">Vestíveis:</h4>
+            <div className="product-cards">
+              {products
+                .filter((product) => product.category === "vestivel")
+                .map((product) => (
+                  <ProductCard key={product.id} product={product} />
+                ))}
+            </div>
+          </section>
         </div>
       </div>
     </div>

@@ -2,15 +2,16 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { FaStar, FaStarHalfAlt } from "react-icons/fa";
 import { RiShoppingCartLine, RiWallet3Line } from "react-icons/ri";
-import Navbar from "../../header/NavBar";
-import fone from "./img/fone.png";
-import w1 from "./img/details/w1.png";
-import w2 from "./img/details/w2.png";
-import w3 from "./img/details/w3.png";
-import w4 from "./img/details/w4.png";
-import productsData from "../../../APIS/products.json";
+import Navbar from "../components/header/NavBar";
+import fone from "../components/Main/products/img/fone.png";
+import w1 from "../components/Main/products/img/details/w1.png";
+import w2 from "../components/Main/products/img/details/w2.png";
+import w3 from "../components/Main/products/img/details/w3.png";
+import w4 from "../components/Main/products/img/details/w4.png";
 
-import "./css/Details.css";
+import productsData from "../APIS/products.json";
+
+import "../components/Main/products/css/Details.css";
 
 interface Product {
   id: number;
@@ -18,6 +19,7 @@ interface Product {
   price: number;
   image: string;
   description: string;
+  category: string;
 }
 
 interface RouteParams {

@@ -9,6 +9,7 @@
 }
 
 body {
-  user-select: none;
+  /* user-select: none; */
+  overflow-x: hidden;
   background-color: #e7e2de;
 }

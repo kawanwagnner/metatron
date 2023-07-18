@@ -1,12 +1,19 @@
 .produtos {
-  width: 100%;
+  width: 100vw;
+  height: 100%;
 }
 
 .produtos .wrapper {
-  max-width: 75em;
+  max-width: 80em;
   margin: auto;
   margin-bottom: 50px;
   position: relative;
+}
+
+.product-cards {
+  display: flex;
+  align-items: center;
+  justify-content: start;
 }
 
 .products-title {
@@ -29,11 +36,15 @@
   transform: translateX(-50%);
 }
 
+.section-title {
+  margin: 10px;
+  font-weight: bold;
+  font-size: 20px;
+  font-style: italic;
+}
+
 #container-cards {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
+  display: block;
   width: 100%;
   height: 100%;
   margin-bottom: 10px;
@@ -66,19 +77,29 @@
 }
 
 .card::after {
-  content: "FONE";
+  content: "WIRELESS";
   position: absolute;
   bottom: 0px;
   left: 50%;
   transform: translateX(-40%);
   font-weight: 600;
-  font-size: 4em;
+  font-size: 2em;
   color: rgba(0, 0, 0, 0.1);
+}
+
+.btn-add-cart {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  color: #fff;
+  cursor: pointer;
+  z-index: 2;
 }
 
 .card .imgBx {
   position: relative;
   width: 100%;
+  height: auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -88,6 +109,9 @@
 
 .card .imgBx img {
   max-width: 70%;
+  object-fit: contain;
+  aspect-ratio: 2/2;
+
   transition: 0.5s;
 }
 

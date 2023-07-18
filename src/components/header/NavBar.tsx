@@ -5,10 +5,12 @@ import { AiOutlineMenu } from "react-icons/ai";
 import { FaShoppingCart } from "react-icons/fa";
 import { GrClose } from "react-icons/gr";
 import { FaLocationDot, FaMagnifyingGlass } from "react-icons/fa6";
+import { useNavigate } from "react-router-dom";
 
 import "../header/css/Navbar.css";
 
 const Navbar: React.FC = () => {
+  const navigate = useNavigate();
   const [navbarAtivo, setNavbarAtivo] = useState(false);
 
   const handleClick = () => {
@@ -104,7 +106,7 @@ const Navbar: React.FC = () => {
             <p>Rastreio</p>
             <h6 className="rhetorical-question">Onde está meu pedido?</h6>
           </div>
-          <div id="btn-cart-shopping">
+          <div id="btn-cart-shopping" onClick={() => navigate("/favorited")}>
             <button>
               <FaShoppingCart size={28} />
             </button>
