@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import logo from "./img/metatronColorBlack.svg";
 
 import { AiOutlineMenu } from "react-icons/ai";
-import { FaShoppingCart } from "react-icons/fa";
+import { BsFillHandbagFill } from "react-icons/bs";
 import { GrClose } from "react-icons/gr";
 import { FaLocationDot, FaMagnifyingGlass } from "react-icons/fa6";
 import { useNavigate } from "react-router-dom";
@@ -33,7 +33,7 @@ const Navbar: React.FC = () => {
           {navbarAtivo ? <GrClose /> : <AiOutlineMenu />}
         </button>
 
-        <img id="logo" src={logo} alt={"logo"} />
+        <img id="logo" src={logo} alt={"logo"} onClick={() => navigate("/")} />
 
         <div id="header-info">
           <div className="search-input">
@@ -99,7 +99,7 @@ const Navbar: React.FC = () => {
         </div>
 
         <div className="products-for-client">
-          <div id="btn-location">
+          <div id="btn-location" onClick={() => navigate("/")}>
             <button>
               <FaLocationDot size={25} />
             </button>
@@ -108,7 +108,8 @@ const Navbar: React.FC = () => {
           </div>
           <div id="btn-cart-shopping" onClick={() => navigate("/favorited")}>
             <button>
-              <FaShoppingCart size={28} />
+              <span className="counter">0</span>
+              <BsFillHandbagFill size={28} />
             </button>
             <p>Carrinho</p>
           </div>
