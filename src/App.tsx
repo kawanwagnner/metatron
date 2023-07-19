@@ -1,6 +1,8 @@
 import React from "react";
 import { Routers } from "./Routes/Routes";
 
+import "./App.css";
+
 const App: React.FC = () => {
   // useEffect(() => {
   //   const handleContextMenu = (event: Event) => {

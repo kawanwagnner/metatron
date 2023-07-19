@@ -53,7 +53,7 @@ const Navbar: React.FC = () => {
                   className="nav-link white-color active"
                   aria-current="page"
                   onClick={handleLinkClick}
-                  href={"/"}
+                  onClickCapture={() => navigate("/")}
                 >
                   Página Inicial
                 </a>
@@ -106,7 +106,7 @@ const Navbar: React.FC = () => {
             <p>Rastreio</p>
             <h6 className="rhetorical-question">Onde está meu pedido?</h6>
           </div>
-          <div id="btn-cart-shopping" onClick={() => navigate("/favorited")}>
+          <div id="btn-cart-shopping" onClick={() => navigate("/cartpage")}>
             <button>
               <span className="counter">0</span>
               <BsFillHandbagFill size={28} />
