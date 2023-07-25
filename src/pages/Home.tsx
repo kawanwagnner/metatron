@@ -5,6 +5,7 @@ import Footer from "../components/Footer/Footer";
 import Products from "../components/Main/products/Products";
 import Navbar from "../components/header/NavBar";
 import Carousel from "../components/Main/slider/SliderIndex";
+import QuestionsFrequently from "../components/Reusable/QuestionsFrequently";
 
 const Home: React.FC = () => {
   return (
@@ -15,6 +16,7 @@ const Home: React.FC = () => {
       <Categories />
       <Products />
       <AboutUs />
+      <QuestionsFrequently />
       <Footer />
     </>
   );

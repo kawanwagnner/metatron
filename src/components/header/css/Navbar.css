@@ -287,6 +287,8 @@ html {
   }
 }
 
+/* >> FALTA UMA RESPONSIVE AQUI << */
+
 @media screen and (max-width: 700px) {
   #cabeçalho {
     display: flex;

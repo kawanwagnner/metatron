@@ -1,5 +1,9 @@
+#container-cartpage {
+  max-width: 85em;
+  margin: auto;
+}
+
 .cart-page {
-  max-width: 80em;
   height: 100%;
   display: flex;
   align-items: center;
@@ -8,10 +12,21 @@
 }
 
 .cart-title {
-  font-size: 2rem;
-  margin: 0 0 20px 20px;
+  font-size: 0.8rem;
+  margin: 10px 0 50px 10px;
   padding-top: 20px;
   font-weight: 400;
+  color: #000;
+  position: relative;
+}
+
+.total-price {
+  position: absolute;
+  right: 0;
+  top: 23px;
+  font-size: 1.3rem;
+  font-weight: 400;
+  text-align: end;
   color: #000;
 }
 
@@ -138,15 +153,4 @@
 .card:hover .contentBx .buy {
   top: 0px;
   opacity: 1;
-}
-
-.total-price {
-  font-size: 1.5rem;
-  margin: 0 0 20px 20px;
-  padding-top: 20px;
-  font-weight: 400;
-  text-align: end;
-  margin: 20px 50px;
-  color: #000;
-  /* position: relative; */
 }

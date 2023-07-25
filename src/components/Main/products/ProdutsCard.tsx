@@ -21,7 +21,7 @@ interface ProductCardProps {
 
 const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
   const navigate = useNavigate();
-  const { addToCart } = useContext(ProductContext);
+  const { addToCart, removeFromCart } = useContext(ProductContext);
   const [icon, setIcon] = useState<JSX.Element>(<BsBagHeart size={25} />);
   const [showPopup, setShowPopup] = useState(false);
 
@@ -55,7 +55,14 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
   };
 
   const removeInCart = () => {
-    setIcon(<BsBagHeart size={25} />);
+    let cartItems: Product[] = [];
+    if (icon.type === BsBagCheckFill) {
+      removeFromCart(product.id);
+      setIcon(<BsBagHeart size={25} />);
+
+      cartItems.push(product);
+      localStorage.removeItem("cartItems");
+    }
   };
 
   return (
@@ -84,7 +91,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
           <img
             onClick={() => navigate(`/details/${product.id}`)}
             src={product.image}
-            alt="Algo deu errado. :-("
+            alt="Imagem do Produto"
           />
         </div>
         <div className="contentBx">

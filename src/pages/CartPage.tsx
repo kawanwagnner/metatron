@@ -30,36 +30,38 @@ const CartPage: React.FC = () => {
   return (
     <>
       <Navbar />
-      <div className="cart-title">
-        <h1>Meu carrinho:</h1>
-      </div>
-      <div className="cart-page">
-        {cartItems.map((product) => (
-          <div className="card" key={product.id}>
-            <div className="btn-remove-cart">
-              <button onClick={() => handleRemoveFromCart(product.id)}>
-                <GrClose />
-              </button>
-            </div>
-            <div className="imgBx">
-              <img
-                onClick={() => navigate(`/details/${product.id}`)}
-                src={product.image}
-                alt="Algo deu errado. :-("
-              />
-            </div>
-            <div className="contentBx">
-              <h3>{product.name}</h3>
-              <h2 className="price">R$ {product.price.toFixed(2)}</h2>
-              <a href={`/details/${product.id}`} className="buy">
-                Mais Detalhes
-              </a>
-            </div>
+      <div id="container-cartpage">
+        <div className="cart-title">
+          <h1>Meu carrinho:</h1>
+          <div className="total-price">
+            <h3>Total a pagar - R$ {formattedTotalPrice}</h3>
           </div>
-        ))}
-      </div>
-      <div className="total-price">
-        <h3>Total a pagar - R$ {formattedTotalPrice}</h3>
+        </div>
+        <div className="cart-page">
+          {cartItems.map((product) => (
+            <div className="card" key={product.id}>
+              <div className="btn-remove-cart">
+                <button onClick={() => handleRemoveFromCart(product.id)}>
+                  <GrClose />
+                </button>
+              </div>
+              <div className="imgBx">
+                <img
+                  onClick={() => navigate(`/details/${product.id}`)}
+                  src={product.image}
+                  alt="Imagem do Produto"
+                />
+              </div>
+              <div className="contentBx">
+                <h3>{product.name}</h3>
+                <h2 className="price">R$ {product.price.toFixed(2)}</h2>
+                <a href={`/details/${product.id}`} className="buy">
+                  Mais Detalhes
+                </a>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </>
   );
