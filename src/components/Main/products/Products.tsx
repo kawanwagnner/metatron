@@ -22,7 +22,7 @@ const Products: React.FC = () => {
   }, []);
 
   return (
-    <div id="produtos" className="produtos">
+    <div id="produtos">
       <div className="wrapper">
         <h3 className="products-title">Principais produtos:</h3>
 
