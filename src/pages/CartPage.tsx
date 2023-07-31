@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { ProductContext } from "../Context/ProductContext";
 import { useNavigate } from "react-router-dom";
 import Navbar from "../components/header/NavBar";
@@ -10,6 +10,13 @@ const CartPage: React.FC = () => {
   const navigate = useNavigate();
   const { cartItems } = useContext(ProductContext);
   const { removeFromCart } = useContext(ProductContext);
+
+  const [isCartEmpty, setIsCartEmpty] = useState(true);
+
+  useEffect(() => {
+    // Check if the cart is empty and update the state accordingly
+    setIsCartEmpty(cartItems.length === 0);
+  }, [cartItems]);
 
   const handleRemoveFromCart = (productId: number) => {
     removeFromCart(productId);
@@ -33,9 +40,15 @@ const CartPage: React.FC = () => {
       <div id="container-cartpage">
         <div className="cart-title">
           <h1>Meu carrinho:</h1>
-          <div className="total-price">
-            <h3>Total a pagar - R$ {formattedTotalPrice}</h3>
-          </div>
+          {isCartEmpty ? (
+            <h1 className="empty-cart-message">
+              O carrinho está vazio. <span>(╥﹏╥)</span>
+            </h1>
+          ) : (
+            <div className="total-price">
+              <h3>Total a pagar - R$ {formattedTotalPrice}</h3>
+            </div>
+          )}
         </div>
         <div className="cart-page">
           {cartItems.map((product) => (
