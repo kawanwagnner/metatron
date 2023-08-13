@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import logo from "./img/metatronColorBlack.svg";
 
 import { AiOutlineMenu } from "react-icons/ai";
@@ -12,6 +12,17 @@ import "../header/css/Navbar.css";
 const Navbar: React.FC = () => {
   const navigate = useNavigate();
   const [navbarAtivo, setNavbarAtivo] = useState(false);
+  const [cartItemCount, setCartItemCount] = useState(0);
+
+  useEffect(() => {
+    // Count items in localStorage and update cartItemCount
+    const countItemsInCart = () => {
+      const cartItems = JSON.parse(localStorage.getItem("cartItems") || "[]");
+      setCartItemCount(cartItems.length);
+    };
+
+    countItemsInCart();
+  }, []);
 
   const handleClick = () => {
     setNavbarAtivo(!navbarAtivo);
@@ -108,7 +119,7 @@ const Navbar: React.FC = () => {
           </div>
           <div id="btn-cart-shopping" onClick={() => navigate("/cartpage")}>
             <button>
-              <span className="counter">0</span>
+              <span className="counter">{cartItemCount}</span>
               <BsFillHandbagFill size={28} />
             </button>
             <p>Carrinho</p>

@@ -7,6 +7,13 @@ import img6 from "../categories/img/exemplares/produto-n6.jpg";
 
 import "../categories/css/Categories.css";
 
+// const CategoriesContainer: any = document.querySelector(".category-container");
+
+// CategoriesContainer.map((item: String) => {
+//   const ItemsCategories = [item];
+//   return console.log(ItemsCategories);
+// });
+
 const BasicCarousel = () => {
   return (
     <div id="container">

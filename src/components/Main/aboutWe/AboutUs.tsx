@@ -6,7 +6,7 @@ import "./css/AboutWe.css";
 
 const AboutUs: React.FC = () => {
   return (
-    <section className="container-fluid" id="sobre-mim">
+    <section className="container-fluid" id="about-us">
       <div className="wrapper">
         <h3 className="about-title">Quem somos?</h3>
         <Container className="section">

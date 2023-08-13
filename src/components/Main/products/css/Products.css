@@ -1,9 +1,9 @@
-.produtos {
+#produtos {
   width: 100vw;
   height: 100%;
 }
 
-.produtos .wrapper {
+#produtos .wrapper {
   max-width: 80em;
   margin: auto;
   margin-bottom: 50px;

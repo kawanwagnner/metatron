@@ -60,8 +60,15 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
       removeFromCart(product.id);
       setIcon(<BsBagHeart size={25} />);
 
-      cartItems.push(product);
-      localStorage.removeItem("cartItems");
+      const savedCartItems = localStorage.getItem("cartItems");
+      if (savedCartItems) {
+        cartItems = JSON.parse(savedCartItems);
+
+        // Remove o item do carrinho pelo ID
+        cartItems = cartItems.filter((item) => item.id !== product.id);
+
+        localStorage.setItem("cartItems", JSON.stringify(cartItems));
+      }
     }
   };
 
