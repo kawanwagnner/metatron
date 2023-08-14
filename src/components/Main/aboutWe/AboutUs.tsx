@@ -2,7 +2,7 @@ import React from "react";
 import { Container, Image } from "react-bootstrap";
 import logo from "./img/LogoMetatron.svg";
 
-import "./css/AboutWe.css";
+import "./css/AboutUs.css";
 
 const AboutUs: React.FC = () => {
   return (

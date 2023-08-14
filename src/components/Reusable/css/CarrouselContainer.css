@@ -1,0 +1,18 @@
+@media (max-width: 1270px) {
+  .button-prev,
+  .button-next {
+    position: absolute;
+    top: 5%;
+    left: 3%;
+    display: block;
+
+    color: #fff;
+    cursor: pointer;
+    width: 102px;
+    margin: auto;
+  }
+
+  .button-next {
+    right: -90%;
+  }
+}

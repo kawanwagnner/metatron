@@ -103,7 +103,13 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
         </div>
         <div className="contentBx">
           <h3>{product.name}</h3>
-          <h2 className="price">R$ {product.price.toFixed(2)}</h2>
+          <h2 className="price">
+            R${" "}
+            {product.price.toLocaleString("pt-BR", {
+              minimumFractionDigits: 2,
+              maximumFractionDigits: 2,
+            })}
+          </h2>
           <a href={`/details/${product.id}`} className="buy">
             Compre Agora
           </a>

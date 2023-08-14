@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 import ProductCard from "./ProdutsCard";
 import productsData from "../../../APIS/products.json";
 
@@ -24,7 +25,15 @@ const Products: React.FC = () => {
   return (
     <div id="produtos">
       <div className="wrapper">
-        <h3 className="products-title">Principais produtos:</h3>
+        <motion.h3
+          initial={{ opacity: 0, x: -500, y: -50 }}
+          animate={{ opacity: 1, x: 0, y: 0 }}
+          exit={{ opacity: 0, x: -100 }}
+          transition={{ duration: 0.7 }}
+          className="products-title"
+        >
+          Principais produtos:
+        </motion.h3>
 
         <div id="container-cards">
           <section className="sections">

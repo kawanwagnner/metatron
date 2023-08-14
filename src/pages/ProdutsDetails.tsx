@@ -80,7 +80,11 @@ const ProductDetails: React.FC = () => {
               <div className="product-div-right">
                 <span className="product-name">{product.name}</span>
                 <span className="product-price">
-                  R$ {product.price.toFixed(2)}
+                  R${" "}
+                  {product.price.toLocaleString("pt-BR", {
+                    minimumFractionDigits: 2,
+                    maximumFractionDigits: 2,
+                  })}
                 </span>
                 <div className="product-rating">
                   <span>

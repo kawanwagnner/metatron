@@ -14,7 +14,7 @@ import "../categories/css/Categories.css";
 //   return console.log(ItemsCategories);
 // });
 
-const BasicCarousel = () => {
+const CategoriesItems = () => {
   return (
     <div id="container">
       <div>
@@ -65,4 +65,4 @@ const BasicCarousel = () => {
   );
 };
 
-export default BasicCarousel;
+export default CategoriesItems;

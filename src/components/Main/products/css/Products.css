@@ -47,9 +47,10 @@
 
 #container-cards {
   display: block;
-  width: 100%;
+  width: 80em;
   height: 100%;
   margin-bottom: 10px;
+  overflow: hidden;
 }
 
 .card {

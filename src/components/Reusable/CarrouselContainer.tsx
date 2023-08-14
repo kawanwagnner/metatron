@@ -1,18 +1,13 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import CategoriesItems from "./CategoriesItems";
-
-import "./css/Categories.css";
 import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from "react-icons/md";
 
-const Categories: React.FC = () => {
+import "./css/Categories.css";
+
+const CarouselContainer: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
-  const slides = [
-    <div className="category" />,
-    <div className="category" />,
-    <div className="category" />,
-  ];
+  const slides = [<div />];
 
   const slideWidth = 260; // Defina a largura do slide aqui
 
@@ -33,19 +28,11 @@ const Categories: React.FC = () => {
   return (
     <div id="container" className="categories">
       <div className="wrapper">
-        <motion.h3
-          initial={{ opacity: 0, x: -500, y: -50 }}
-          animate={{ opacity: 1, x: 0, y: 0 }}
-          exit={{ opacity: 0, x: -100 }}
-          transition={{ duration: 0.7 }}
-          className="category-title"
-        >
-          Nossas categorias:
-        </motion.h3>
+        <h3 className="category-title">Nossas categorias:</h3>
 
         <motion.div className="carousel-container">
           <div className="carousel-track" style={trackStyle}>
-            {slides.map((_, index) => (
+            {slides.map((slide, index) => (
               <motion.div
                 key={index}
                 className="carousel-slide"
@@ -54,7 +41,7 @@ const Categories: React.FC = () => {
                 exit={{ opacity: 0, x: -100 }}
                 transition={{ duration: 0.5 }}
               >
-                <CategoriesItems />
+                {slide}
               </motion.div>
             ))}
           </div>
@@ -71,13 +58,9 @@ const Categories: React.FC = () => {
             <MdKeyboardArrowRight size={30} />
           </button>
         </motion.div>
-
-        {/* <button className="btn-show-all" type="button">
-          Mostrar mais categorias
-        </button> */}
       </div>
     </div>
   );
 };
 
-export default Categories;
+export default CarouselContainer;
