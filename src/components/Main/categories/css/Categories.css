@@ -6,15 +6,22 @@
 
 .carousel-container {
   overflow: hidden;
-  width: 79%;
-  margin: 25px auto;
+  width: 110vh;
+  margin: 30px auto;
 }
 
-.carousel-track {
+.carousel {
+  cursor: grab;
+}
+
+.inner {
   display: flex;
   align-items: center;
-  gap: 30px;
-  margin: 20px;
+  justify-content: center;
+}
+
+.category {
+  margin: 0 5px;
 }
 
 .button-prev,

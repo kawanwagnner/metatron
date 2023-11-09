@@ -1,9 +1,20 @@
+import { useState, useEffect, useRef } from 'react';
 import { motion } from "framer-motion";
-import CategoriesItems from "./CategoriesItems";
+import img1 from "../categories/img/exemplares/produto-n1.webp";
+import img2 from "../categories/img/exemplares/produto-n2.jpg";
+import img3 from "../categories/img/exemplares/produto-n3.webp";
+import img4 from "../categories/img/exemplares/produto-n4.webp";
+import img6 from "../categories/img/exemplares/produto-n6.jpg";
+import CategoryItem from "./CategoriesItems";
 
 import "./css/Categories.css";
 
 const Categories: React.FC = () => {
+  const carousel = useRef();
+
+  useEffect(() => {
+    // console.log(carousel.current?.scrollWidth, carousel.current?.offsetWidth)
+  }, [])
 
   return (
     <div id="container" className="categories">
@@ -18,11 +29,19 @@ const Categories: React.FC = () => {
           Nossas categorias:
         </motion.h3>
 
-        <div className="carousel-container">
-          <div className="carousel">
-            <CategoriesItems />
-          </div>
-        </div>
+        <motion.div className="carousel-container">
+          <motion.div className="carousel">
+            <motion.div className="inner" drag="x">
+
+              <CategoryItem imageUrl={img1} titleCategory="Tecnologia" />
+              <CategoryItem imageUrl={img2} titleCategory="Games" />
+              <CategoryItem imageUrl={img3} titleCategory="Vestíveis" />
+              <CategoryItem imageUrl={img4} titleCategory="Cozinha" />
+              <CategoryItem imageUrl={img6} titleCategory="Mesa" />
+
+            </motion.div>
+          </motion.div>
+        </motion.div>
       </div>
     </div>
   );
