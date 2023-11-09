@@ -10,6 +10,10 @@
   position: relative;
 }
 
+.sections {
+  width: 9999px;
+}
+
 .product-cards {
   display: flex;
   align-items: center;
