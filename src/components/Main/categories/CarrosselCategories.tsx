@@ -10,11 +10,14 @@ import CategoryItem from "./CategoriesItems";
 import "./css/Categories.css";
 
 const Categories: React.FC = () => {
-  const carousel = useRef();
+  const carousel = useRef<HTMLDivElement>(null);
+  const [width, setWidth] = useState(0);
 
   useEffect(() => {
-    // console.log(carousel.current?.scrollWidth, carousel.current?.offsetWidth)
-  }, [])
+    if (carousel.current) {
+      setWidth(carousel.current.scrollWidth - carousel.current.offsetWidth);
+    }
+  }, []);
 
   return (
     <div id="container" className="categories">
@@ -29,9 +32,10 @@ const Categories: React.FC = () => {
           Nossas categorias:
         </motion.h3>
 
-        <motion.div className="carousel-container">
+        <motion.div ref={carousel} className="carousel-container" whileTap={{ cursor: "grabbing" }}>
           <motion.div className="carousel">
-            <motion.div className="inner" drag="x">
+            <motion.div className="inner" drag="x"
+              dragConstraints={{ right: 0, left: - width }}>
 
               <CategoryItem imageUrl={img1} titleCategory="Tecnologia" />
               <CategoryItem imageUrl={img2} titleCategory="Games" />
