@@ -35,7 +35,7 @@ const Categories: React.FC = () => {
         <motion.div ref={carousel} className="carousel-container" whileTap={{ cursor: "grabbing" }}>
           <motion.div className="carousel">
             <motion.div className="inner" drag="x"
-              dragConstraints={{ right: 0, left: - width }}>
+              dragConstraints={{ right: 0, left: - width * 5 }}>
 
               <CategoryItem imageUrl={img1} titleCategory="Tecnologia" />
               <CategoryItem imageUrl={img2} titleCategory="Games" />

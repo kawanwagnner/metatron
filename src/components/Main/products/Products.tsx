@@ -1,9 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import ProductCard from "./ProdutsCard";
 import productsData from "../../../APIS/products.json";
 
 import "./css/Products.css";
+import QuestionsFrequently from "../../Reusable/QuestionsFrequently";
+import { Box } from "@mui/material";
 
 interface Product {
   id: number;
@@ -15,6 +17,8 @@ interface Product {
 
 const Products: React.FC = () => {
   const [products, setProducts] = useState<Product[]>([]);
+  const carousel = useRef<HTMLDivElement>(null);
+
 
   useEffect(() => {
     // Simulando uma chamada à API:
@@ -36,30 +40,64 @@ const Products: React.FC = () => {
         </motion.h3>
 
         <div id="container-cards">
-          <section className="sections">
-            <h4 className="section-title">Tecnologia:</h4>
-            <div className="product-cards">
+
+          <h4 className="section-title">Tecnologia:</h4>
+          <motion.section ref={carousel} className="sections carousel-container" whileTap={{ cursor: "grabbing" }}>
+            <motion.div className="product-cards" drag="x"
+              dragConstraints={{ right: 0, left: - 650 }}>
               {products
                 .filter((product) => product.category === "tecnologia")
                 .map((product) => (
                   <ProductCard key={product.id} product={product} />
                 ))}
-            </div>
-          </section>
+            </motion.div>
+          </motion.section>
 
-          <section className="sections">
-            <h4 className="section-title">Vestíveis:</h4>
-            <div className="product-cards">
+          <h4 className="section-title">Vestíveis:</h4>
+          <motion.section ref={carousel} className="sections carousel-container" whileTap={{ cursor: "grabbing" }}>
+            <motion.div className="product-cards" drag="x"
+              dragConstraints={{ right: 0, left: - 650 }}>
+
               {products
-                .filter((product) => product.category === "vestivel")
+                .filter((product) => product.category === "tecnologia")
                 .map((product) => (
                   <ProductCard key={product.id} product={product} />
                 ))}
-            </div>
-          </section>
+            </motion.div>
+          </motion.section>
+
+          {/* <Box marginTop={35} /> */}
+          <QuestionsFrequently />
+          {/* <Box marginBottom={-20} /> */}
+
+          <h4 className="section-title">Tecnologia:</h4>
+          <motion.section ref={carousel} className="sections carousel-container" whileTap={{ cursor: "grabbing" }}>
+            <motion.div className="product-cards" drag="x"
+              dragConstraints={{ right: 0, left: - 650 }}>
+              {products
+                .filter((product) => product.category === "tecnologia")
+                .map((product) => (
+                  <ProductCard key={product.id} product={product} />
+                ))}
+            </motion.div>
+          </motion.section>
+
+          <h4 className="section-title">Vestíveis:</h4>
+          <motion.section ref={carousel} className="sections carousel-container" whileTap={{ cursor: "grabbing" }}>
+            <motion.div className="product-cards" drag="x"
+              dragConstraints={{ right: 0, left: - 650 }}>
+              {/*  */}
+              {products
+                .filter((product) => product.category === "tecnologia")
+                .map((product) => (
+                  <ProductCard key={product.id} product={product} />
+                ))}
+            </motion.div>
+          </motion.section>
+
         </div>
       </div>
-    </div>
+    </div >
   );
 };
 
