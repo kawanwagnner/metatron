@@ -67,7 +67,6 @@ const Products: React.FC = () => {
           </motion.section>
 
           {/* <Box marginTop={35} /> */}
-          <QuestionsFrequently />
           {/* <Box marginBottom={-20} /> */}
 
           <h4 className="section-title">Tecnologia:</h4>
@@ -94,6 +93,7 @@ const Products: React.FC = () => {
                 ))}
             </motion.div>
           </motion.section>
+          <QuestionsFrequently />
 
         </div>
       </div>

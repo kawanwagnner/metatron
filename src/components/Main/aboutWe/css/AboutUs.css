@@ -41,6 +41,33 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  background-color: #e7e7e7;
+  padding: 50px;
+  border-radius: 10px;
+}
+
+.flex-column {
+  color: #000;
+  text-indent: 40px;
+}
+
+.pops-qualities {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px auto;
+  width: 100%;
+  background-color: yellow;
+}
+
+.flex-column span {
+  background-color: blue;
+  color: #fff;
+  padding: 5px;
+  margin: 0 10px;
+  border-radius: 50px;
+  display: block;
+  text-align: center;
 }
 
 #container-image {

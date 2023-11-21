@@ -17,6 +17,8 @@ const AboutUs: React.FC = () => {
             </h4>
           </div>
           <div className="flex-column">
+            <h4>Prezamos por</h4>
+            <div className="pops-qualities"><span>Inovação</span><span>Qualidade</span><span>Integridade</span><span>Confiaça</span></div>
             <p className="paragraphy fs-5 fst-italic">
               Na Metatron, unimos a elegância das roupas com a inovação da
               tecnologia. Somos apaixonados por criar experiências únicas,
