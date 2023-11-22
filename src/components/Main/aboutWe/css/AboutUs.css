@@ -51,23 +51,42 @@
   text-indent: 40px;
 }
 
+.content-qualities {
+  position: relative;
+}
+
+.content-qualities img {
+  position: absolute;
+  top: -95%;
+  left: 0px;
+
+  transform: translateY(-30%);
+
+  width: 50em;
+}
+
+.title-qualities {
+  margin-left: -150px;
+  font-size: 23px;
+}
+
 .pops-qualities {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 10px auto;
+  margin: 40px auto;
   width: 100%;
-  background-color: yellow;
 }
 
 .flex-column span {
   background-color: blue;
   color: #fff;
-  padding: 5px;
-  margin: 0 10px;
+  padding: 3px;
+  margin: 0 5px;
   border-radius: 50px;
   display: block;
-  text-align: center;
+  padding-right: 40px;
+  z-index: 1;
 }
 
 #container-image {

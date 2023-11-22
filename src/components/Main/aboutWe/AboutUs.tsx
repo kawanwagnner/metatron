@@ -1,6 +1,7 @@
 import React from "react";
 import { Container, Image } from "react-bootstrap";
 import logo from "./img/LogoMetatron.svg";
+import extetion from "C:/Users/DevLibbs/Documents/GitHub/metatron/public/extension-no-bg.png"
 
 import "./css/AboutUs.css";
 
@@ -17,8 +18,16 @@ const AboutUs: React.FC = () => {
             </h4>
           </div>
           <div className="flex-column">
-            <h4>Prezamos por</h4>
-            <div className="pops-qualities"><span>Inovação</span><span>Qualidade</span><span>Integridade</span><span>Confiaça</span></div>
+            <div className="content-qualities">
+              <h4 className="title-qualities">Prezamos por</h4>
+              <img src={extetion} alt="" />
+            </div>
+            <div className="pops-qualities">
+              <span>Inovação</span>
+              <span>Qualidade</span>
+              <span>Integridade</span>
+              <span>Confiaça</span>
+            </div>
             <p className="paragraphy fs-5 fst-italic">
               Na Metatron, unimos a elegância das roupas com a inovação da
               tecnologia. Somos apaixonados por criar experiências únicas,
