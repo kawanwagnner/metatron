@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import img1 from "../categories/img/exemplares/produto-n1.webp";
 import img2 from "../categories/img/exemplares/produto-n2.jpg";
@@ -32,17 +32,22 @@ const Categories: React.FC = () => {
           Nossas categorias:
         </motion.h3>
 
-        <motion.div ref={carousel} className="carousel-container" whileTap={{ cursor: "grabbing" }}>
+        <motion.div
+          ref={carousel}
+          className="carousel-container"
+          whileTap={{ cursor: "grabbing" }}
+        >
           <motion.div className="carousel">
-            <motion.div className="inner" drag="x"
-              dragConstraints={{ right: 0, left: - width * 5 }}>
-
+            <motion.div
+              className="inner"
+              drag="x"
+              dragConstraints={{ right: 0, left: -width * 3 }}
+            >
               <CategoryItem imageUrl={img1} titleCategory="Tecnologia" />
               <CategoryItem imageUrl={img2} titleCategory="Games" />
               <CategoryItem imageUrl={img3} titleCategory="Vestíveis" />
               <CategoryItem imageUrl={img4} titleCategory="Cozinha" />
               <CategoryItem imageUrl={img6} titleCategory="Mesa" />
-
             </motion.div>
           </motion.div>
         </motion.div>

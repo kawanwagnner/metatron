@@ -1,6 +1,6 @@
 #container-QuestionsFrequently {
-  width: 100em;
-  height: 50vh;
+  width: 100vw;
+  height: 80vh;
   margin: auto;
   position: relative;
 }
@@ -9,9 +9,9 @@
   position: absolute;
   top: 50%;
   left: 0%;
-  padding: 30px;
   width: 80%;
   margin: auto;
   border-radius: 50px;
-  transform: translateY(-50%);
+  transform: translate(10%, -50%);
+  display: block;
 }

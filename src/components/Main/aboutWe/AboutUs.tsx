@@ -1,7 +1,6 @@
 import React from "react";
-import { Container, Image } from "react-bootstrap";
+import { Image } from "react-bootstrap";
 import logo from "./img/LogoMetatron.svg";
-import extetion from "C:/Users/DevLibbs/Documents/GitHub/metatron/public/extension-no-bg.png"
 
 import "./css/AboutUs.css";
 
@@ -9,8 +8,17 @@ const AboutUs: React.FC = () => {
   return (
     <section className="container-fluid" id="about-us">
       <div className="wrapper">
-        <h3 className="about-title">Quem somos?</h3>
-        <Container className="section">
+        <div className="titles">
+          <h3 className="about-title">Quem somos?</h3>
+          <h6 className="subtitle">Prezamos por</h6>
+        </div>
+        <div className="pops-qualities">
+          <span>Inovação</span>
+          <span>Qualidade</span>
+          <span>Integridade</span>
+          <span>Confiaça</span>
+        </div>
+        <div className="section">
           <div id="container-image">
             <Image src={logo} alt="Photo" roundedCircle id="photo" />
             <h4 className="about-typing d-inline-flex ms-3 mt-4 fst-italic">
@@ -18,16 +26,6 @@ const AboutUs: React.FC = () => {
             </h4>
           </div>
           <div className="flex-column">
-            <div className="content-qualities">
-              <h4 className="title-qualities">Prezamos por</h4>
-              <img src={extetion} alt="" />
-            </div>
-            <div className="pops-qualities">
-              <span>Inovação</span>
-              <span>Qualidade</span>
-              <span>Integridade</span>
-              <span>Confiaça</span>
-            </div>
             <p className="paragraphy fs-5 fst-italic">
               Na Metatron, unimos a elegância das roupas com a inovação da
               tecnologia. Somos apaixonados por criar experiências únicas,
@@ -52,7 +50,7 @@ const AboutUs: React.FC = () => {
               ganham vida com a magia da tecnologia.
             </p>
           </div>
-        </Container>
+        </div>
       </div>
     </section>
   );
