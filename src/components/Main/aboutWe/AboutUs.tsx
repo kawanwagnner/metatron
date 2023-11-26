@@ -39,15 +39,7 @@ const AboutUs: React.FC = () => {
               para oferecer um produto excepcional. Acreditamos que a moda e a
               tecnologia devem andar de mãos dadas, trazendo inovação e
               praticidade para o seu guarda-roupa. Valorizamos a confiança e a
-              satisfação dos nossos clientes. Trabalhamos incessantemente para
-              garantir a excelência em cada aspecto do nosso negócio, desde o
-              atendimento ao cliente até a entrega dos produtos. Estamos
-              comprometidos em fornecer um serviço de qualidade, uma experiência
-              de compra segura e produtos que você irá adorar. Seja você um
-              entusiasta da moda ou um aficionado por tecnologia, na Metatron
-              você encontrará o equilíbrio perfeito entre estilo e inovação.
-              Junte-se a nós em nossa jornada e descubra um mundo onde as roupas
-              ganham vida com a magia da tecnologia.
+              satisfação dos nossos clientes.
             </p>
           </div>
         </div>
